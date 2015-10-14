@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block title %}Index{% endblock %}
+{% block head %}
+{{ super() }}
+
+{% endblock %}
+{% block content %}
+{% if session["name"] %}
+<h1>
+Hi, {{session["name"]}}! <br>
+</h1>
+<a href="/logout">forget me</a>
+{% else %}
+{{form.email(placeholder="email")}}
+{% endif %}
+{% endblock %}
