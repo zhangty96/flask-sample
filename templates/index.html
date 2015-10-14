@@ -11,6 +11,9 @@ Hi, {{session["name"]}}! <br>
 </h1>
 <a href="/logout">forget me</a>
 {% else %}
-{{form.email(placeholder="email")}}
+<form action="" method="post" name="index">
+{{form.name(placeholder="Sample Name")}}
+<input type="submit" value="Submit">
+</form>
 {% endif %}
 {% endblock %}
